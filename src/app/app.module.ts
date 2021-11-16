@@ -8,6 +8,9 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { MaisonComponent } from './maison/maison.component';
+import { TerrainComponent } from './terrain/terrain.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { HomeComponent } from './home/home.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    MaisonComponent,
+    TerrainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
