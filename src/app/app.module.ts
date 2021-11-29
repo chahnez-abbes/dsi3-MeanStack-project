@@ -8,19 +8,20 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { MaisonComponent } from './maison/maison.component';
+import { MaisonsComponent } from './maisons/maisons.component';
 import { TerrainComponent } from './terrain/terrain.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
+
     AppComponent,
     NavbarComponent,
     AboutComponent,
     ContactComponent,
     FooterComponent,
     HomeComponent,
-    MaisonComponent,
+   
     TerrainComponent
   ],
   imports: [

@@ -10,6 +10,7 @@ export class MaisonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
