@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import {AboutComponent} from "./about/about.component";
 import{ContactComponent} from"./contact/contact.component";
  import{HomeComponent} from"./home/home.component";
-import { MaisonComponent } from './maisons/maison/maison.component';
 import { MaisonsComponent } from './maisons/maisons.component';
 import { TerrainComponent } from './terrain/terrain.component';
 const routes: Routes = [

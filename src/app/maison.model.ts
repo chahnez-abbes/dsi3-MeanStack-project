@@ -7,5 +7,6 @@ export interface Maison {
     prix: string;
     lieu: string;
     tel: number;
-    
+    mail:string;
+    detail:string;
 }
