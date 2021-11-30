@@ -30,48 +30,49 @@
             <div class="col-md-12">
               <div class="section-heading">
                 <h2>les maisons </h2><br>
-                <a routerLink="/hotel">voir plus <i class="fa fa-angle-right"></i></a>
+                <a routerLink="/maisons">voir plus <i class="fa fa-angle-right"></i></a>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="product-item">
-                <a routerLink="package-details.html"><img src="assets/images/product-details-1-740x540.jpg" alt=""></a>
+            <div class="col-md-4" *ngFor="let maison of maisonlist ; index as i"  >
+
+              <div class="product-item"  *ngIf="i==0">
+                <a routerLink="/maisons/{{maison.id}}"><img src="assets/images/{{maison.image }}" alt=""></a>
                 <div class="down-content">
-                  <a routerLink="package-details.html"><h4>benarous</h4></a>
+                  <a routerLink="/maisons/{{maison.id}}"><h4>{{maison.lieu }}</h4></a>
   
-                  <h6>$400</h6>
+                  <h6>{{maison.prix|currency:'EUR' }}</h6>
   
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
+                  <p>{{ maison.description|slice:0:70 }} [...]</p>
   
                 
                 </div>
               </div>
-            </div>
+          
   
-            <div class="col-md-4">
-              <div class="product-item">
-                <a routerLink="package-details.html"><img src="assets/images/product-details-1-740x540.jpg" alt=""></a>
+           
+              <div class="product-item"  *ngIf="i==1">
+                <a routerLink="/maisons/{{maison.id}}"><img src="assets/images/{{maison.image }}" alt=""></a>
                 <div class="down-content">
-                  <a routerLink="package-details.html"><h4>mater</h4></a>
+                  <a routerLink="/maisons/{{maison.id}}"><h4>{{maison.lieu }}</h4></a>
   
-                  <h6>$400</h6>
+                  <h6>{{maison.prix|currency:'EUR' }}</h6>
   
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
+                  <p>{{ maison.description|slice:0:70 }} [...]</p>
   
                  
                 </div>
               </div>
-            </div>
+            
   
-            <div class="col-md-4">
-              <div class="product-item">
-                <a routerLink="package-details.html"><img src="assets/images/product-details-1-740x540.jpg" alt=""></a>
+            
+              <div class="product-item"  *ngIf="i==2">
+                <a routerLink="/maisons/{{maison.id}}"><img src="assets/images/{{maison.image }}" alt=""></a>
                 <div class="down-content">
-                  <a routerLink="package-details.html"><h4>bizert</h4></a>
+                  <a routerLink="/maisons/{{maison.id}}"><h4>{{maison.lieu }}</h4></a>
   
-                  <h6>400</h6>
+                  <h6>{{maison.prix|currency:'EUR' }}</h6>
   
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
+                  <p>{{ maison.description|slice:0:70 }} [...]</p>
   
                  
                 </div>

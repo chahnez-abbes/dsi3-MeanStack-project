@@ -7,7 +7,7 @@ export const maisons: Maison[] = [
     description:
       'This course introduces students to the basic concepts of computer science. It covers the basic programming concepts, data structures, and algorithms, and introduces students to the software development process. Students will learn to use a programming language, and to write algorithms in a programming language. This course is a prerequisite for the CS program.',
     image:
-      'product-details-1-740x540.jpg',
+      'téléchargement (1).jpg',
     nbchambre: '2',
     prix: '255',
     lieu: 'tunis',
@@ -22,7 +22,7 @@ export const maisons: Maison[] = [
     description:
       'This course introduces students to the basic concepts of computer science. It covers the basic programming concepts, data structures, and algorithms, and introduces students to the software development process. Students will learn to use a programming language, and to write algorithms in a programming language. This course is a prerequisite for the CS program.',
     image:
-      'product-details-1-740x540.jpg',
+      'téléchargement (2).jpg',
     nbchambre: '2',
     prix: '305',
     lieu: 'Bizerte',
@@ -36,7 +36,7 @@ export const maisons: Maison[] = [
     description:
       'This course introduces students to the basic concepts of computer science. It covers the basic programming concepts, data structures, and algorithms, and introduces students to the software development process. Students will learn to use a programming language, and to write algorithms in a programming language. This course is a prerequisite for the CS program.',
     image:
-      'product-details-1-740x540.jpg',
+      'téléchargement (3).jpg',
     nbchambre: '4',
     prix: '275',
     lieu: 'tataouin',
@@ -63,7 +63,7 @@ export const maisons: Maison[] = [
     description:
       'This course introduces students to the basic concepts of computer science. It covers the basic programming concepts, data structures, and algorithms, and introduces students to the software development process. Students will learn to use a programming language, and to write algorithms in a programming language. This course is a prerequisite for the CS program.',
     image:
-      'product-details-1-740x540.jpg',
+      'téléchargement (4).jpg',
     nbchambre: '1',
     prix: '155',
     lieu: 'Kefe',
@@ -105,7 +105,7 @@ export const maisons: Maison[] = [
     description:
       'This course introduces students to the basic concepts of computer science. It covers the basic programming concepts, data structures, and algorithms, and introduces students to the software development process. Students will learn to use a programming language, and to write algorithms in a programming language. This course is a prerequisite for the CS program.',
     image:
-      'product-details-1-740x540.jpg',
+      'téléchargement (5).jpg',
     nbchambre: '1',
     prix: '155',
     lieu: 'Ariena',
