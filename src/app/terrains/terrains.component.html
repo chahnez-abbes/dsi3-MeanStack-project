@@ -1,0 +1,56 @@
+
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-content">
+                <br><br>
+                <h2>bienvenue chez nous</h2>
+                <br><br><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-heading">
+          <br>
+        <h2 style="margin-left: 10%;">Terrain a vendre</h2>
+        <div style="margin-left: 70%; padding-right: 9%;">
+          <input class="form-control" type="text" placeholder="Search des maison" aria-label="Search des maison">
+       </div>
+          </div>
+      <div class="products">
+        <div class="container">
+          <div class="row"   >
+             
+            <div class="col-md-4" *ngFor="let terain of terainsl">
+              <div class="product-item">
+                <a routerLink="/terains/{{terain.id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
+                <div class="down-content">
+                  <a routerLink="/terains/{{terain.id}}"><h4> {{terain.lieu }}</h4></a>
+  
+                  <h6>{{terain.prix|currency:'EUR' }}</h6>
+  
+                  <p>{{ terain.description|slice:0:70 }} [...]</p>
+  
+                
+               
+              </div>
+            </div></div>
+  
+  
+        </div>
+            <div class="col-md-12">
+              <ul class="pages">
+                <li><a routerLink="">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a routerLink="#">3</a></li>
+                <li><a routerLink="#">4</a></li>
+                <li><a routerLink="#"><i class="fa fa-angle-double-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+   
