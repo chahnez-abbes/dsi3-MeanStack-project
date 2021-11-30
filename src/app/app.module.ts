@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MaisonsComponent } from './maisons/maisons.component';
-import { TerrainComponent } from './terrain/terrain.component';
+import { TerrainComponent } from './terrains/terrain/terrain.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     HomeComponent,
-   
+
     TerrainComponent
   ],
   imports: [

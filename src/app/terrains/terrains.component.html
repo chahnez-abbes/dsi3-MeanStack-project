@@ -24,23 +24,23 @@
       <div class="products">
         <div class="container">
           <div class="row"   >
-             
+
             <div class="col-md-4" *ngFor="let terain of terainsl">
               <div class="product-item">
-                <a routerLink="/terains/{{terain.id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
+                <a routerLink="/terrains/{{terain.id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
                 <div class="down-content">
-                  <a routerLink="/terains/{{terain.id}}"><h4> {{terain.lieu }}</h4></a>
-  
+                  <a routerLink="/terrains/{{terain.id}}"><h4> {{terain.lieu }}</h4></a>
+
                   <h6>{{terain.prix|currency:'EUR' }}</h6>
-  
+
                   <p>{{ terain.description|slice:0:70 }} [...]</p>
-  
-                
-               
+
+
+
               </div>
             </div></div>
-  
-  
+
+
         </div>
             <div class="col-md-12">
               <ul class="pages">
@@ -53,4 +53,4 @@
             </div>
           </div>
         </div>
-   
+
