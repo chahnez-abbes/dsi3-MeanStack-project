@@ -14,7 +14,8 @@ export class MaisonComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
     this.route.paramMap.subscribe(params => {
       const maisonId = params.get("id");
       this.maison = maisons.filter(maison => maison.id === maisonId)[0];

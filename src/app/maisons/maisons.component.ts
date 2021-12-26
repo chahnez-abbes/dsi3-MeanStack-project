@@ -14,7 +14,8 @@ export class MaisonsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
   }
 
 }

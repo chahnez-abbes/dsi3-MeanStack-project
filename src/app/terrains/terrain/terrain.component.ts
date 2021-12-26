@@ -14,6 +14,8 @@ export class TerrainComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
      this.route.paramMap.subscribe(params => {
       const terrainId = params.get("id");
       this.terrain = terrains.filter(terrain => terrain.id === terrainId)[0];
