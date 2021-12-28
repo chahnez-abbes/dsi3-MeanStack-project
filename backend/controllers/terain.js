@@ -1,16 +1,16 @@
-const Course = require('./../models/terain');
+const terain = require('./../models/terrain');
 
 // get all terain
 exports.all = (req, res) => {
-  Course.find()
-    .then(courses => res.status(200).json(terain))
+  terain.find()
+    .then(terains => res.status(200).json(terains))
     .catch(err => res.status(400).json({error: err.message}));
 };
 
 // get a terain by id
 exports.get = (req, res, next) => {
-  Course.findOne({ _id: req.params.id })
-      .then(course => res.status(200).json(terain))
+  terain.findOne({ _id: req.params.id })
+      .then(terains => res.status(200).json(terains))
       .catch(error => res.status(404).json({ error }));
   };
 
@@ -19,7 +19,7 @@ exports.create = (req, res, next) => {
   const terain = new terain({
     ...req.body
   });
-  course.save()
+  terain.save()
     .then(() => res.status(201).json({ message: 'terain created  !'}))
     .catch(error => res.status(400).json({ error }));
 };

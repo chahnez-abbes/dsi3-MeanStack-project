@@ -27,10 +27,11 @@
           <div class="row"   >
              
             <div class="col-md-4" *ngFor="let maison of maisonl">
-              <div class="product-item">
-                <a routerLink="/maisons/{{maison.id}}"><img src="assets/images/{{maison.image }}" alt="" ></a>
+              <div class="product-item" > 
+               
+                <a routerLink="/maisons/{{maison._id}}"><img src="assets/images/{{maison.image }}" alt="" ></a>
                 <div class="down-content">
-                  <a routerLink="/maisons/{{maison.id}}"><h4> {{maison.lieu }}</h4></a>
+                  <a routerLink="/maisons/{{maison._id}}"><h4> {{maison.lieu }}</h4></a>
   
                   <h6>{{maison.prix|currency:'EUR' }}</h6>
   

@@ -1,16 +1,16 @@
-const Course = require('./../models/maison');
+const maison = require('./../models/maison');
 
 // get all maison
 exports.all = (req, res) => {
-  Course.find()
-    .then(courses => res.status(200).json(maison))
+  maison.find()
+    .then(maisons => res.status(200).json(maisons))
     .catch(err => res.status(400).json({error: err.message}));
 };
 
 // get a maison by id
 exports.get = (req, res, next) => {
-  Course.findOne({ _id: req.params.id })
-      .then(course => res.status(200).json(maison))
+  maison.findOne({ _id: req.params.id })
+      .then(maisons => res.status(200).json(maisons))
       .catch(error => res.status(404).json({ error }));
   };
 

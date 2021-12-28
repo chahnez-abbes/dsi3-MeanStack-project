@@ -26,9 +26,9 @@
 
             <div class="col-md-4" *ngFor="let terain of terainsl">
               <div class="product-item">
-                <a routerLink="/terrains/{{terain.id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
+                <a routerLink="/terrains/{{terain._id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
                 <div class="down-content">
-                  <a routerLink="/terrains/{{terain.id}}"><h4> {{terain.lieu }}</h4></a>
+                  <a routerLink="/terrains/{{terain._id}}"><h4> {{terain.lieu }}</h4></a>
 
                   <h6>{{terain.prix|currency:'EUR' }}</h6>
 
