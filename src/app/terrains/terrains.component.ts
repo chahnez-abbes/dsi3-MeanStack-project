@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 import { terrains } from '../terrain';
 import { Terrain } from '../terrain.model';
 import { TerrainService } from '../terrain.service';
@@ -11,7 +12,7 @@ import { TerrainService } from '../terrain.service';
 export class TerrainsComponent implements OnInit {
   public terains: Terrain[] = terrains;
   public terainsl: any = [];
-  constructor( private TerrainService: TerrainService) { }
+  constructor( private TerrainService: TerrainService,public service: AuthService) { }
 
   ngOnInit(): void {
     this.TerrainService.all().subscribe(

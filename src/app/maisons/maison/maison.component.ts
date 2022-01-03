@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { maisons } from 'src/app/maison';
 import { Maison } from 'src/app/maison.model';
 import { MaisonService } from 'src/app/maison.service';
@@ -12,7 +13,7 @@ import { MaisonService } from 'src/app/maison.service';
 export class MaisonComponent implements OnInit {
 
   maison:any = [];
-  constructor(private route: ActivatedRoute, private maisonService: MaisonService) { }
+  constructor(private route: ActivatedRoute, private maisonService: MaisonService , public router: Router) { }
 
   ngOnInit(): void {
     document.body.scrollTop=0;
@@ -20,12 +21,15 @@ export class MaisonComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       const id = params.get("id");
       this.maisonService.get(id).subscribe(   
+        
+        
         data=>{this.maison = data;
-          console.log(data);
-          
+         
+          console.log(this.maison);
+        
         }  
-        );
-       });
+       );
       
+      });
 }
 }

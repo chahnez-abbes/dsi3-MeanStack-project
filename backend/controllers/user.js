@@ -1,9 +1,10 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { reduceEachLeadingCommentRange } = require('typescript');
 const User = require('../models/User');
 
 exports.signup = (req, res, next) => {
- 
+
   bcrypt.hash(req.body.password, 10)
   .then(hash => {
     const user = new User({
@@ -26,8 +27,10 @@ exports.signup = (req, res, next) => {
 };
 
 exports.login = (req, res, next) => {
-  User.findOne({ email: req.body.email })
+
+  User.findOne({ name: req.body.name })
       .then(user => {
+        
         if (!user) {
           return res.status(401).json({ error: 'User not found !' });
         }
@@ -38,6 +41,7 @@ exports.login = (req, res, next) => {
             }
             res.status(200).json({
               userId: user._id,
+              status: 201,
               token: jwt.sign(
                 { userId: user._id },
                 'RANDOM_TOKEN_SECRET',

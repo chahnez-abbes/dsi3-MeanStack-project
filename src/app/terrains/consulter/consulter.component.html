@@ -1,0 +1,42 @@
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+             
+              <h2>Terain detail</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="margin: 10%;">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">image</th>
+          <th scope="col">nom d'hotel</th>
+          <th scope="col">adresse</th>
+          <th scope="col">telephon</th>
+          <th scope="col">prix</th>
+          <th scope="col" style="text-align: center;">Update/Delete/View</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let terain of terainsl">
+          
+          <td><img src="assets/images/{{terain.image }}" alt="" style="padding: 0%;width: 220px;height: 120px;"></td>
+          <td>{{terain.name}}</td>
+          <td>{{terain.lieu}}</td>
+          <td>{{terain.tel}}</td>
+          <td>{{terain.prix}}</td>
+          <td style="text-align: center;">                <button (click) = "updatterin(terain._id)" class = "btn btn-info"> Update</button>
+            <button (click) = "deleteterain(terain._id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            <button (click) = "terrainDetails(terain._id)" class = "btn btn-info" style="margin-left: 10px"> View</button></td>
+        </tr>
+      
+      </tbody>
+    </table></div>

@@ -1,5 +1,6 @@
 const maison = require('./../models/maison');
 
+//const verify=require ('./../middlewares/auth');
 // get all maison
 exports.all = (req, res) => {
   maison.find()
@@ -7,13 +8,39 @@ exports.all = (req, res) => {
     .catch(err => res.status(400).json({error: err.message}));
 };
 
-// get a maison by id
+
+
+// get a maison by id 
 exports.get = (req, res, next) => {
+
+  console.log("waa2");
   maison.findOne({ _id: req.params.id })
       .then(maisons => res.status(200).json(maisons))
-      .catch(error => res.status(404).json({ error }));
+      .catch(error => res.status(401).json({ error }));
+
+ 
+ 
   };
 
+
+
+
+
+/*
+// get a maison by id securiterrrrrrrrrrrr avec post maine il fous faire registerForm
+exports.get = (req, res, next) => {
+  console.log(req.params.id);
+  console.log("waa"+verify(req, res, next));
+ if( verify(req, res, next)){
+  console.log("waa2");
+  maison.findOne({ _id: req.params.id })
+      .then(maisons => res.status(200).json(maisons))
+      .catch(error => res.status(401).json({ error }));
+ }else{
+  throw 'Invalid user ID';
+ }
+  };
+*/
   // store a new maison
 exports.create = (req, res, next) => {
   const maison = new maison({

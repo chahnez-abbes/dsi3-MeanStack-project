@@ -16,16 +16,34 @@
                     </a>
                 </li> 
 
-                <li class="nav-item"  ><a class="nav-link" routerLink="/maison">Maison</a></li>
-               
+                <li class="nav-item" *ngIf="service.valide"  ><a class="nav-link" routerLink="/maison">Maison</a></li>
+                <li class="nav-item" *ngIf="service.valide1"  ><a class="nav-link" routerLink="/maison">Maison</a></li>
+                <li class="nav-item dropdown" *ngIf="service.valide2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Maison</a>
+                  
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" routerLink="/maison">consulter les maison</a>
+                    <a class="dropdown-item" routerLink="/ajouter">add Maison</a>
+                    <a class="dropdown-item" routerLink="/consulterm">gerée Maison</a>
+                  </div>
+              </li>
 
-                <li class="nav-item"><a class="nav-link" routerLink="/terrain">Terrain</a></li>
-
+                <li class="nav-item" *ngIf="service.valide" ><a class="nav-link" routerLink="/terrain">Terrain</a></li>
+                <li class="nav-item" *ngIf="service.valide1"  ><a class="nav-link" routerLink="/terrain">Terrain</a></li>
+                <li class="nav-item dropdown" *ngIf="service.valide2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Terrain</a>
+                  
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" routerLink="/terrain">consulter les terrain</a>
+                    <a class="dropdown-item" routerLink="/ajouter">add Terrain</a>
+                    <a class="dropdown-item" routerLink="/consultert">gerée Terrain</a>
+                  </div>
+              </li>
 
                
               
-                <li class="nav-item"><a class="nav-link" routerLink="/about/register">Login</a>
-                 
+                <li class="nav-item"><a  *ngIf="service.valide"class="nav-link" routerLink="/about/login">Login</a>
+                  <a  *ngIf="!service.valide"class="nav-link" routerLink="/about/login" (click) = "logout()" >Logout</a>
                 </li>
             </ul>
           </div>

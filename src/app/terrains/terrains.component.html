@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-
+    <div *ngIf="service.valide">
       <div class="section-heading">
           <br>
         <h2 style="margin-left: 10%;">Terrain a vendre</h2>
@@ -26,9 +26,9 @@
 
             <div class="col-md-4" *ngFor="let terain of terainsl">
               <div class="product-item">
-                <a routerLink="/terrains/{{terain._id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
+                <a routerLink="/about/login"><img src="assets/images/{{terain.image }}" alt="" ></a>
                 <div class="down-content">
-                  <a routerLink="/terrains/{{terain._id}}"><h4> {{terain.lieu }}</h4></a>
+                  <a routerLink="/about/login"><h4> {{terain.lieu }}</h4></a>
 
                   <h6>{{terain.prix|currency:'EUR' }}</h6>
 
@@ -52,4 +52,70 @@
             </div>
           </div>
         </div>
+</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="!service.valide">
+  <div class="section-heading">
+      <br>
+    <h2 style="margin-left: 10%;">Terrain a vendre</h2>
+    <div style="margin-left: 70%; padding-right: 9%;">
+      <input class="form-control" type="text" placeholder="Search des maison" aria-label="Search des maison">
+   </div>
+      </div>
+  <div class="products">
+    <div class="container">
+      <div class="row"   >
+
+        <div class="col-md-4" *ngFor="let terain of terainsl">
+          <div class="product-item">
+            <a routerLink="/terrains/{{terain._id}}"><img src="assets/images/{{terain.image }}" alt="" ></a>
+            <div class="down-content">
+              <a routerLink="/terrains/{{terain._id}}"><h4> {{terain.lieu }}</h4></a>
+
+              <h6>{{terain.prix|currency:'EUR' }}</h6>
+
+              <p>{{ terain.description|slice:0:70 }} [...]</p>
+
+
+
+          </div>
+        </div></div>
+
+
+    </div>
+        <div class="col-md-12">
+          <ul class="pages">
+            <li><a routerLink="">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a routerLink="#">3</a></li>
+            <li><a routerLink="#">4</a></li>
+            <li><a routerLink="#"><i class="fa fa-angle-double-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
